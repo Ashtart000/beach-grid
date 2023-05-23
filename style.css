@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.beach {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.header, .one, .two {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+.header {
+    grid-row: 1 / 2;
+    height: 100vh;
+    background-image: url(./img/ракушка.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    padding: 2vh;
+}
+
+.title {
+    font-size: 6vh;
+}
+
+.description, .button {
+    font-size: 2vh;
+}
+
+article {
+    padding: 2vw;
+    font-size: 2vh;
+}
+
+.one, .three, .five, .button:hover {
+    background-color: #926239;
+    color: #ffffff;
+}
+
+.header, .two, .four, .button {
+    color: #926239;
+}
+
+.button {
+    font-family: inherit;
+    background-color: #92633900;
+    border: 0.5vh solid #926239;
+    border-radius: 1vh;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .three, .four, .five {
+        grid-column: 1 / 4;
+        text-align: center;
+    }
+}
